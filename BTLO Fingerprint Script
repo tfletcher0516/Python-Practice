@@ -1,0 +1,10 @@
+import jsonwith 
+
+open('list.json', 'r') as json_file:	
+ data = json.load(json_file)	
+ unique_values =list()
+ for x in data:	
+    if x['ja3_digest'] not in unique_values:		
+        unique_values.append(x['ja3_digest'])
+        
+print(unique_values)
